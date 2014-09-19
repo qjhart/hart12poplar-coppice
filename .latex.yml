@@ -1,4 +1,4 @@
 # In .latex.yml
-compiler: xelatex
+compiler: pdflatex
 
 root_file: hart12poplar-coppice.tex
