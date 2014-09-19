@@ -1,0 +1,44 @@
+\begin{tabularx}{\linewidth}{|c|X|c|}
+  \hline
+  Parameter & Source & Value\\
+  \hline
+  \acs{k}  & \acf{k} & 0.5\\
+  fullCanAge [yr] & Year where tree reaches full Canopy Cover. & 0  \\
+  kG \reciprocal\kilo\pascal & Determines the response of the canopy conductance to the vapor pressure deficit. & 0.5\\
+  alpha [\kilogram\mole] & Canopy quantum efficiency. & 0.06\\
+  \hline
+  \acs{fT} [frac] & The parameters specifing limitations from ambient temperature. & \\
+  $mn_{\acs{fT}}$ [\Celsius] & The minimum temperature for respiration & 5\\
+  $opt_{\acs{fT}}$ [\Celsius] & The optimum temperature for respiration & 20\\
+  $mx_{\acs{fT}}$  [\Celsius] & The maximum temperature for respiration & 40\\
+  \hline
+  \acs{BLcond} [\reciprocal\meter] & Canopy boundary layer conductance. Used in the calcuation of transpiration & 0.2\\
+  \hline
+  \acs{fAge} [frac] & Specifies the growth limiter as a function of the tree age.  This is a time dependant parameter. Specified with 4 parameters. & \\
+  $f0_{\acs{fAge}}$ &  Value for \acs{fAge} at Initial Time & 1\\
+  $f1_{\acs{fAge}}$ & Value for \acs{fAge} at Infinite Time & 0 \\
+  $tm_{\acs{fAge}}$ [y] & Time in years where value is the average of $f0$ and $f1$ & 47.5\\
+  $n_{\acs{fAge}}$ & $n>=1$ Parameter specifing the rate of change around tm.  n=1 is approximately a linear change, as n increases, change becomes more localized around tm. & 3.5\\
+  \hline
+   $fN0$ [frac] & Used in the calculation of the nutritional modifier,$fNutr$.  $fNutr$ ranges from [$fNO$,1) based on the fertility index which ranges from 0 to 1.  When $fN0=1$ indicates $fNutr=1$ & 1\\
+   \hline
+   \acs{SLA} [$\square\meter\per\kilogram$] & \acf{SLA}.  Defined as a function of the tree age.  Used in the calculation of LAI. &\\
+   $f0_{\acs{SLA}}$ & \acs{SLA} at initial time & 10.8\\
+   $f1_{\acs{SLA}}$ & \acs{SLA} at infinite timestep & 10.8\\
+   $tm_{\acs{SLA}}$ [y] & Time in years where value is the average of $f0$ and $f1$ & 1\\
+   $n$  & $n>=1$; Parameter specifing the rate of change around $tm$.  $n=1$ is approximately a linear change, as n increases, change becomes more localized around $tm$. & 2\\
+   \hline
+   $Cond$ [$\meter\per\second$] &  Canopy Conductance.  Along with a Physiological modifer, specifies the canopy conductance.  Used in calculation of transpiration & \\
+   $mn_{Cond}$ & Minimum value, when $lai=0$ & 0.0001\\
+   $mx_{Cond}$ & Maximum value & 0.02\\
+   $lai_{Cond}$ [$\square\meter\per\square\meter$] & \ac{LAI} where parameter reaches a maximum value. & 3.33\\
+ \hline
+ $Intcptn$ [frac] & Rainfall interception fraction.  A linear function w.r.t. \ac{LAI} & \\
+  $mn_{Intcptn}$ & Minimum value, when lai=0 & 0\\
+  $mx_{Intcptn}$ & Maximum value & 0.15\\
+  $lai_{Intcptn}$ [$\square\meter\per\square\meter$] & \ac{LAI} where parameter reaches a maximum value. & 5\\
+ \hline \hline
+ y & Assimilation use efficiency.  Used in calculation of the NPP. & 0.47\\
+ \hline 
+\end{tabularx}
+
